@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    {% if Tutorial_number %}
+        <ul>
+        {% for question in Tutorial_number %}
+<!--            <li><a href="/P/{{ question }}/">{{ question }}</a></li>-->
+            <li><a href="{% url 'P:TN' question %}">{{ question }}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>Nothing to show</p>
+    {% endif %}
+</body>
+</html>

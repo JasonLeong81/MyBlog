@@ -1,0 +1,19 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ML</title>
+</head>
+<body>
+    <p>Welcome to Machine Learning.</p>
+    <form action="{% url 'ML:Tutorial' %}" method="POST">
+        {% csrf_token %}
+        <button type="submit" name="filename" value="Linear_Regression">Linear Regression</button>
+        <button type="submit" name="filename" value="Ridge_Regression">Ridge Regression</button>
+        <button type="submit" name="filename" value="Lasso_Regression">Lasso Regression</button>
+    </form>
+</body>
+<link rel="stylesheet" type="text/css" href="{% static 'ML/style.css' %}">
+</html>

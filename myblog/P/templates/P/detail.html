@@ -1,0 +1,12 @@
+<form action="{% url 'P:insert'  %}" method="POST">
+    {% csrf_token %}
+        <fieldset>
+            <legend><h1>Insert into database</h1></legend>
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" value="jason">
+                <label for="age">Age:</label>
+                <input type="number" name="age" id="age" value=1>
+        </fieldset>
+    <input type="submit" value="Submit">
+</form>
+<a href="{% url 'P:result' %}">Result</a>

@@ -1,0 +1,11 @@
+{% load static %}
+
+<ol>
+    {% for i in r %}
+        <li>{{i}}</li>
+    {% endfor %}
+</ol>
+
+<a href="{% url 'P:detail' %}">Detail</a>
+
+<link rel="stylesheet" type="text/css" href="{% static 'P/style.css' %}">

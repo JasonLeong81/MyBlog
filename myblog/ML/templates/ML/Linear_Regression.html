@@ -1,0 +1,49 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Linear Regression</title>
+</head>
+<body>
+    <p>Welcome to Linear Regression</p>
+    Alright, see you tomorrow!
+    <p>
+        In Linear Regression, we have two variables x and y. The goal is to predict y using x.
+        In other words, given the value of x, what is the value of y? Well, given the equation y=m*x + c, we just have to substitute x with whatever value we have and voila! We get our y.
+        But hold on, this method only works if we know what m and c are right? Yes, and that is what we will be looking at right now.
+        Before we compute m and c, lets take a look at some definitions to clear up any future confusions. In Mathematics, m is known as the gradient and c is the y-intercept of a linear function. m shows how steep the line (linear function) is and y is the point of the line where it crosses the y-axis, hence its name the y-intercept.
+        However, in Machine Learning, m is usually referred to as the weight and c is often referred to as the bias. Keep this in mind because you will rarely hear people talking about gradient and y-intercept when they are referring to m and c respectively.
+        Traditionally, we will compute m and c to find the equation of a line. Given two points, we can compute m with the following formula
+    </p>
+    <p>
+        Then using a simple substitution method we can find c. At this point, we have m and c and our equation of line is finally complete. Now, randomly pick a value r and substitute x for with r. Then find the corresponding y value. Done! This is how we predict y from x. Easy right? That's because it is. Linear Regression works in the same way but for multiple points instead of just two.
+        It is important to note that if we have more than two points, it will be extremely difficult to find a line that will connect all of them. See the below example, our data points are scattered all around the place and there is no way we can find a line to connect all of them.
+        Note, when I say finding a line I mean finding its equation (y=m*x+c) and it is equivalent to saying finding the value for m and c. So since there is no way a line can connect all data points, then there exist no combination of values for m and c such that y = m*x + c connects all the data points.
+        Damn! We are stuck. Fortunately, this is where Linear Regression comes in. Linear Regression says "Okay! If we can't find a line that connects all points, how about we find a line that is close to the majority of the points? So the distance from each point to our line is minimised." This way we can still predict y using x but with a little bit of "error". The error is the sum of all distances from each point to our line. The further points are from our line, the larger the distance, hence the higher the error, resulting a poorer prediction.
+        So the idea of Linear Regression is not to find a line that perfectly fits (aka connect, but lets use fit for future convenience) all points but to find a line that minimises the distance (aka error) of itself to all points in our dataset.
+
+    </p>
+
+
+
+    <p>
+        The sum of all distances can be calculated with the following formulae.
+        Figure A is equivalent to Figure B since when we are dealing with optimization problems, constants don't really make a difference.
+    </p>
+
+    <p>
+        Steps:
+        We start by giving m and c a random value. Doesn't really matter what values they take in the beginning because over time they will change.
+        We calculate the error (aka distance of each point to our line) of our model.
+    </p>
+
+
+
+
+</body>
+</html>
+
+t = between groups variances/sum of within group variances (when variances are unknown and sample size is small)
+correlation = sum of error(x)*error(y) / (sum error(x) ** 2) * (sum error(y) ** 2)
